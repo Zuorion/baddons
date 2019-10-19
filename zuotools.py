@@ -153,6 +153,7 @@ class RAlignOrientationToSelection(bpy.types.Operator):
         objects = bpy.data.objects
                 
         #Create custom orientation
+        prev_orientation = bpy.context.scene.transform_orientation_slots[0].type
         bpy.context.scene.transform_orientation_slots[0].type = 'NORMAL'
         bpy.ops.transform.create_orientation(name="rOrientation", use=True, overwrite=True)
 
@@ -168,6 +169,7 @@ class RAlignOrientationToSelection(bpy.types.Operator):
         
         #Restore settings and editmode
         bpy.ops.transform.delete_orientation()
+        bpy.context.scene.transform_orientation_slots[0].type = prev_orientation 
         bpy.context.scene.tool_settings.use_transform_data_origin = utdo
         bpy.ops.object.editmode_toggle()
 
