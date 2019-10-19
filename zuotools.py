@@ -30,8 +30,8 @@ class MarkSmoothSharp(bpy.types.Operator):
         obj = bpy.context.object
         me = obj.data
         bm = bmesh.from_edit_mesh(me)
-        me.show_edge_sharp = True
-        me.show_edge_seams = True
+        bpy.context.space_data.overlay.show_edge_sharp = True
+        bpy.context.space_data.overlay.show_edge_seams = True
             
         selected = [e for e in bm.edges if e.select]
         if any(e.smooth == True for e in selected):
