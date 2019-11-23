@@ -45,40 +45,6 @@ class MarkSmoothSharp(bpy.types.Operator):
         bmesh.update_edit_mesh(me)
         return {'FINISHED'}
 
-class VIEW3D_MT_edit_mesh_zuoedges(Menu):
-    bl_label = "ZEdge Data"
-    bl_idname = "VIEW3D_MT_edit_mesh_zuoedges"
-
-    def draw(self, context):
-        layout = self.layout
-
-        with_freestyle = bpy.app.build_options.freestyle
-
-        layout.operator_context = 'INVOKE_REGION_WIN'
-
-        layout.operator("transform.edge_crease")
-        layout.operator("transform.edge_bevelweight")
-
-        layout.separator()
-
-        layout.operator("mesh.mark_seam", text="(A) Mark Seam").clear = False
-        layout.operator("mesh.mark_seam", text="(Q) Clear Seam").clear = True
-
-        layout.separator()
-
-        layout.operator("mesh.mark_sharp", text="(S) Mark Sharp")
-        layout.operator("mesh.mark_sharp", text="(W) Clear Sharp").clear = True
-
-        layout.separator()
-        
-        self.layout.operator( "edit.mark_smoothsharp", text="(D) Mark Smoot'n'Sharp" )
-        layout.separator()
-
-        if with_freestyle:
-            layout.operator("mesh.mark_freestyle_edge").clear = False
-            layout.operator("mesh.mark_freestyle_edge", text="Clear Freestyle Edge").clear = True
-            layout.separator()        
-        
 class VIEW3D_PT_view3d_itemname(bpy.types.Panel):
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
@@ -196,13 +162,12 @@ def register():
     bpy.utils.register_class(MarkSmoothSharp)
     bpy.utils.register_class(RAlignOrientationToSelection)
     bpy.utils.register_class(RAlignOrientationToSelectionWarning)
-    bpy.utils.register_class(VIEW3D_MT_edit_mesh_zuoedges)
     bpy.utils.register_class(VIEW3D_PT_view3d_itemname)
     bpy.utils.register_class(VIEW3D_PT_view3d_itemcursor)
 
 def unregister():
     bpy.utils.unregister_class(MarkSmoothSharp)
-    bpy.utils.unregister_class(VIEW3D_MT_edit_mesh_zuoedges)
+    bpy.utils.unregister_class(RAlignOrientationToSelection)
     bpy.utils.unregister_class(VIEW3D_PT_view3d_itemname)
     bpy.utils.unregister_class(VIEW3D_PT_view3d_itemcursor)
 
