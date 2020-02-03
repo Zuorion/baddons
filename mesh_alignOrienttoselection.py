@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Align Orientation To Selection",
     "author": "Zuorion",
-    "version": (0, 1, 20200203),
+    "version": (0, 2, 20200203),
     "blender": (2, 81, 0),
     "location": "Mesh > Snap",
     "description": "AlignOrientationToSelection",
@@ -25,7 +25,7 @@ class AlignOrientationToSelection(bpy.types.Operator):
     def poll(cls, context):
         obj = context.active_object
         obj_type = obj.type
-        return(obj and obj_type in {'MESH'})
+        return(obj and obj_type in {'MESH'} and obj.mode == 'EDIT')
 
     def execute(self, context):
 
