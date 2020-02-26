@@ -8,7 +8,7 @@ Apply mesh
 Flip Normals (flip normals on 1/3 negative scaled objects to counterflip normal flip after join)
 
 meshoriginto.py
-![](https://i.imgur.com/GLYBTJO.gif)
+https://i.imgur.com/GLYBTJO.gif
 
 Align Orientation To Selection
 ![](https://i.imgur.com/byRKEuG.gif)
