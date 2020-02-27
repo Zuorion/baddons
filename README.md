@@ -1,5 +1,6 @@
-# baddons
-My Blender scripts
+# Zuorion's Blender addons
+My Blender scripts dump
+
 «
 Join+.py
 ![](https://i.imgur.com/gFtLk9m.gif)
