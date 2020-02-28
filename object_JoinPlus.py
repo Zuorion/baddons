@@ -23,7 +23,7 @@ bl_info = {
     "version": (0, 1),
     "blender": (2, 82, 0),
     "location": "Ctrl+J",
-    "description": "Join operaor with additional options",
+    "description": "Join operator with additional options",
     "warning": "",
     "wiki_url": "",
     "category": "Object",
@@ -60,7 +60,7 @@ class JoinPlus(bpy.types.Operator):
         return context.active_object is not None
 
     def execute(self, context):
-        act = context.scene.act
+        #act = context.scene.act
             
         selected_obj = bpy.context.selected_objects
         active_obj = bpy.context.active_object
