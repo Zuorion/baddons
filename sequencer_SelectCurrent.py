@@ -45,8 +45,11 @@ class SequencerSelectCurrent(bpy.types.Operator):
 
 
     def execute(self, context):
+        bpy.ops.screen.frameo_ffset(delta=-1)
         bpy.ops.sequencer.select(left_right='LEFT', linked_time=True)
+        bpy.ops.screen.frame_offset(delta=2)
         bpy.ops.sequencer.select(left_right='RIGHT', extend=True, linked_time=True)
+        bpy.ops.screen.frame_offset(delta=-1)
         bpy.ops.sequencer.select_all(action='INVERT')
 
         
