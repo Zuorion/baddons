@@ -18,6 +18,9 @@ additional options for Join Operator
 #todo autosmooth, materials
 
 «
+**ApplyScale+**
+it fixes issue of inverting normals when applying scale of odd negative values
+![](https://i.imgur.com/XX87C4g.gif)
 
 **Align Orientation To Selection**
 ![](https://i.imgur.com/byRKEuG.gif)
