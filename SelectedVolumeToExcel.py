@@ -74,7 +74,7 @@ class VolumeToClipboard(bpy.types.Operator):
             volume = bm.calc_volume()
             bm.free()
             
-            bpy.context.window_manager.clipboard+=ob.name_full+";"+str(volume)+"\n"
+            bpy.context.window_manager.clipboard+=ob.name_full+"\t"+str(volume)+"\n"
         
         
         return {'FINISHED'}
