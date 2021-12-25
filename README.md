@@ -1,5 +1,6 @@
-# Zuorion's Blender addons
+# Zuorion's Blender addons - baddons.
 My Blender scripts dump
+BADdons because they are bad ¯\_(ツ)_/¯
 
 «
 
@@ -26,6 +27,13 @@ it fixes issue of inverting normals when applying scale of odd negative values
 ![](https://i.imgur.com/byRKEuG.gif)
 
 «
+Select DeExtra
+
+Adds delimit option to operators:
+Selectr More/Less and Linked Flat
+
+by exetuting native blender operators in specific order
+«
 
 Origin Pie converted to regular menu
 **meshoriginto.py**
@@ -33,7 +41,10 @@ https://i.imgur.com/GLYBTJO.gif
 
 «
 
-
+How to instal single file scripts from github:
+Select click on script, rightclick now "RAW" button and chose save file as.
+Then in Blender install that file.
+![](https://i.imgur.com/mHVandf.png)
 
 
 
